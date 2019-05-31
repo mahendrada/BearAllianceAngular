@@ -1,0 +1,21 @@
+<div class="content">
+  <div class="container">
+	 <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                    <div class="box">
+                        <h3 class="box-title">Select Your Character</h3>
+                        <div class="character-selection" style="border-bottom: 2px solid #811b5f;" *ngFor="let char of charcterList">
+                            <div class="character-data">                               
+                                <label for="question1"><a href="#" (click)="getMovies(char.name,char.url)">{{ char.name}}</a></label> 
+                                    <p class="character-text" *ngFor="let film of char.films">                                     
+                                       <span>{{ film.title}} | {{ film.release_date | date:'longDate'}} </span>
+                                    </p> 
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+	 </div>
+</div>
+</div>
+
